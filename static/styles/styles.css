@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+.permits {
+  border-collapse: collapse;
+  border-radius: 6px;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.form-group {
+  margin-top: 10px;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.brand-title {
+  margin-left: 20px;
+}
+
+
+table {
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+table thead {
+  background-color: rgb(33, 37, 41);
+}
+
+.add-food-truck {
+  float: right;
+}
