@@ -1,7 +1,3 @@
 # misc
 .DS_Store
-.venv.local
-.venv.development.local
-.venv.test.local
-
 .venv
