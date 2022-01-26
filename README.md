@@ -13,29 +13,28 @@ A copy of the data is included in the repo so it is not necessary to download it
 
 Back end:
 
-Python 3.7.5,
-Flask 1.1.2.
-Jinja2
+  Python 3.7.5,
+  Flask 1.1.2,
+  Jinja2
 
 Front end:
-HTML.
-Bootstrap5,
-Jquery,
-Javascript
+  HTML,
+  Bootstrap5,
+  Jquery,
+  Javascript
 
 
 ## Installation
 
 To get the project up and running (assuming you have atleast python 3+ installed).
 
-Replace <ENV NAME> with a name of your choice.
 
 ```bash
   git clone https://github.com/MalikIngham/FoodTrucks.git
 
   pip3 install virtualenv
 
-  python3 -m virtualenv <ENV NAME>
+  python3 -m virtualenv <ENV NAME> #Replace < ENV NAME> with a name of your choice.
 
   source <ENV NAME>/bin/activate
 
@@ -76,11 +75,21 @@ users.
 And Lastly I used HTML, Bootstrap, and CSS to clean up the front end to make it more appealing on
 the eyes not only for desktop users but also mobile users.
 
+On the main view `/`. You are able to see the table, filter by column and add new trucks to the record. 
+To add a new truck click on the "Add New Food Truck" button, upon clicking that button you will be
+greated with a popup modal. You are welcome to fill out any field you like as none are required for submission.
+
+There are two ways to sort by `block` and `locationid`.
+  The first way is by using the table itself.
+  The other is by using the `/location/` and `/block/` endpoints.
+  i.e `/location/123456` or `/block/9301`
+This returns a dictionary a JSON object to the user.
+
 
 ## Trade-offs
 Originally I planned on using just pandas dataframe class to sort and display data to the users.
 But after coding a few lines I realized roughly 10+ conditionals where needed and the code would be messy/hard to follow.
 
 Had I had more time to spend on the project I would've loved to include a map view of some sort using 
-Bing Maps, OpenStreetMap, etc. Maps are a more effecient and friendly
-way of displaying information to the users without overwhelming them with blocks of text. 
+Bing Maps, OpenStreetMap, etc. As Maps are a more effecient and friendly
+way of displaying information to the users without overwhelming them with blocks of text.

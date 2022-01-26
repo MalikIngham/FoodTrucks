@@ -2,6 +2,7 @@ from flask import Flask, request, render_template, jsonify
 import pandas as pd
 from collections import OrderedDict
 import csv
+import json
 
 app = Flask(__name__)
 
@@ -26,6 +27,23 @@ def api_add_new_truck():
         permits.append(new_food_truck)
     return jsonify(success=True)
 
+@app.route('/location/')
+@app.route('/location/<locationid>')
+def get_location_id(locationid=None):
+    json_list = []
+    for record in permits:
+        if record['locationid'] == (locationid):
+            json_list.append(record)
+    return json.dumps(json_list, sort_keys=True, indent=4)
+
+@app.route('/block/')
+@app.route('/block/<block>')
+def get_block(block=None):
+    json_list = []
+    for record in permits:
+        if record['block'] == (block):
+            json_list.append(record)
+    return json.dumps(json_list, sort_keys=True, indent=4)
 
 if __name__ == '__main__':
     permits = load_csv()
